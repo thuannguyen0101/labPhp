@@ -13,8 +13,13 @@ use \App\Http\Controllers\DataHandleController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/table', function () {
+    return view('admin/table');
+});
+Route::prefix('/admin')->group(function () {
+    Route::get('form', function (){ return view('admin/form');});
+    Route::get('table', function (){ return view('admin/table');});
+
 });
 Route::prefix('test')->group(function () {
     Route::get('data-handle/{data}/path', [DataHandleController::class, 'handlePathVariable']);
