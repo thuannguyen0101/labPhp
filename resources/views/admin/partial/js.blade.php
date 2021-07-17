@@ -1,6 +1,8 @@
-<script src="/adminLTE/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <!-- bootstrap JS
+
     ============================================ -->
+<script src=""></script>
 <script src="/adminLTE/js/bootstrap.min.js"></script>
 <!-- wow JS
     ============================================ -->
@@ -46,3 +48,8 @@
 <!-- tawk chat JS
     ============================================ -->
 <script src="/adminLTE/js/tawk-chat.js"></script>
+
+
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+

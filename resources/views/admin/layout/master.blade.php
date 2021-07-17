@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Library Assets | Kiaalap - Kiaalap Admin Template</title>
+    <title>Nguyen Ngoc Thuan | T2009M1 </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="/adminLTE/css/educate-custon-icon.css">
     <!-- morrisjs CSS
 		============================================ -->
-    <link rel="stylesheet" href="/adminLTE/css/morris/adminLTE/js/morris.css">
+    <link rel="stylesheet" href="/adminLTE/css/morrisjs/morris.css">
     <!-- mCustomScrollbar CSS
 		============================================ -->
     <link rel="stylesheet" href="/adminLTE/css/scrollbar/jquery.mCustomScrollbar.min.css">
@@ -61,15 +61,20 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="/adminLTE/js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+
+
 </head>
 <body>
 @include('admin/partial.sidebar')
 <div class="all-content-wrapper">
     @include('admin/partial.header')
-
     @yield('content')
     @include('admin/partial.footer')
     @include('admin/partial.js')
+    @yield('extraJs')
 </div>
 </body>
 </html>
