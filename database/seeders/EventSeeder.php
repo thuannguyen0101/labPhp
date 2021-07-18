@@ -26,6 +26,8 @@ class EventSeeder extends Seeder
                 'portfolio' => 'TẾT',
                 'ticketPrice' => '1000000',
                 'status' => '3',
+                'created_at' => Carbon::now()->format('Y-m-d'),
+                'updated_at' => Carbon::now()->format('Y-m-d'),
 
             ],
             [
@@ -37,6 +39,8 @@ class EventSeeder extends Seeder
                 'portfolio' => 'chưa biết',
                 'ticketPrice' => '150000',
                 'status' => '3',
+                'created_at' => Carbon::now()->format('Y-m-d'),
+                'updated_at' => Carbon::now()->format('Y-m-d'),
 
             ],
             [
@@ -48,7 +52,8 @@ class EventSeeder extends Seeder
                 'portfolio' => 'Chưa xác định',
                 'ticketPrice' => '10000000',
                 'status' => '0',
-
+                'created_at' => Carbon::now()->format('Y-m-d'),
+                'updated_at' => Carbon::now()->format('Y-m-d'),
             ],
             [
                 'id' => 4,
@@ -59,6 +64,8 @@ class EventSeeder extends Seeder
                 'portfolio' => 'Hôi Doanh Nhân VN',
                 'ticketPrice' => '1000000',
                 'status' => '2',
+                'created_at' => Carbon::now()->format('Y-m-d'),
+                'updated_at' => Carbon::now()->format('Y-m-d'),
 
             ],
             [
@@ -70,6 +77,8 @@ class EventSeeder extends Seeder
                 'portfolio' => 'BỘ ',
                 'ticketPrice' => '100000000',
                 'status' => '2',
+                'created_at' => Carbon::now()->format('Y-m-d'),
+                'updated_at' => Carbon::now()->format('Y-m-d'),
 
             ],
             [
@@ -81,6 +90,8 @@ class EventSeeder extends Seeder
                 'portfolio' => 'BỘ',
                 'ticketPrice' => '10000000',
                 'status' => '1',
+                'created_at' => Carbon::now()->format('Y-m-d'),
+                'updated_at' => Carbon::now()->format('Y-m-d'),
 
             ],
             [
@@ -90,8 +101,10 @@ class EventSeeder extends Seeder
                 'startDate' => '2021-12-25',
                 'endDate' => '2021-12-26',
                 'portfolio' => 'ABY',
-                'ticketPrice' => '100000',
-                'status' => '1',
+                'ticketPrice' => '1000000',
+                'status' => '0',
+                'created_at' => Carbon::now()->format('Y-m-d'),
+                'updated_at' => Carbon::now()->format('Y-m-d'),
 
             ],
         ]);
