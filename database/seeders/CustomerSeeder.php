@@ -15,9 +15,8 @@ class CustomerSeeder extends Seeder
      */
     public function run()
     {
-
-        DB::table('customers')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        DB::table('customers')->truncate();
         DB::table('customers')->insert([
             [
                 'id' => 1,
@@ -57,5 +56,6 @@ class CustomerSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d'),
             ],
         ]);
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

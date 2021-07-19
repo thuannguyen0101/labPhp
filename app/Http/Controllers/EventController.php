@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EventRequest;
 use App\Models\Event;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Types\Nullable;
 
@@ -21,16 +23,18 @@ class EventController extends Controller
 
     public function create()
     {
+        $date = Carbon::now()->addDays(+1)->format("Y-m-d");
         return view('admin.event.form',[
             'title'=>'Create Event Form',
-            'data'=>null
+            'data'=>null,
+            'date'=>$date
             ]);
     }
 
 
-    public function store(Request $request)
+    public function store(EventRequest $request)
     {
-        $data = $request->input();
+        $data = $request->validated();
         $event = new Event();
         $event->fill($data);
         $event->save();

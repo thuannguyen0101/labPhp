@@ -60,7 +60,7 @@
                                             {{$event->endDate}}
                                         </td>
                                         <td>{{$event->portfolio}}</td>
-                                        <td>{{$event->ticketPrice}}</td>
+                                        <td>{{$event->ticketPrice}}$</td>
                                         @switch($event->status)
                                             @case($event->status ==1)
                                             <td>The event is happening</td>

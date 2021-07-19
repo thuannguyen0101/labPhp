@@ -15,8 +15,9 @@ class OrderSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('orders')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        DB::table('orders')->truncate();
+
         DB::table('orders')->insert([
             [
                 'id' => 1,
@@ -80,5 +81,6 @@ class OrderSeeder extends Seeder
             ],
 
         ]);
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

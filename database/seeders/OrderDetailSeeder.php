@@ -15,9 +15,8 @@ class OrderDetailSeeder extends Seeder
      */
     public function run()
     {
-
-        DB::table('order_details')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        DB::table('order_details')->truncate();
         DB::table('order_details')->insert([
             [
                 'id'=>1,
@@ -288,5 +287,6 @@ class OrderDetailSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d'),
             ],
         ]);
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }
