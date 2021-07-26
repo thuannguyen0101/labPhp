@@ -4,6 +4,7 @@ use App\Http\Requests\EventDemoRequest;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\DataHandleController;
 use  \App\Http\Controllers\EventController;
+use  \App\Http\Controllers\ApartmentController;
 use  \App\Http\Controllers\DemoValidata;
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,11 @@ Route::prefix('/admin/event')->group(function () {
     Route::post('update/{id}', [EventController::class, 'save']);
     Route::get('delete/{id}', [EventController::class, 'destroy'])->name('event_delete');
 
+});
+Route::prefix('/admin/apartment')->group(function () {
+    Route::get('create', [ApartmentController::class, 'create']);
+    Route::post('create', [ApartmentController::class, 'store']);
+    Route::get('list', [ApartmentController::class, 'list']);
 });
 Route::resource('event' , EventController::class);
 //Route::prefix('test')->group(function () {
